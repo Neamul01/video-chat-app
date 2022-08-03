@@ -11,7 +11,6 @@ const Options = ({ children }) => {
             <div className='flex'>
                 <div className="input-group relative mt-2">
                     <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="input input-bordered p-4 w-full border-4" style={{ borderRadius: '2rem' }} />
-                    {console.log(me)}
                     <CopyToClipboard text={me}>
                         <button className="btn btn-square btn-[#606060] absolute right-0 capitalize">
                             <small>Copy Your Id</small>
@@ -35,7 +34,9 @@ const Options = ({ children }) => {
                     }
                 </div>
             </div>
-            <div>
+
+            {/* notification to answer call */}
+            <div className='w-full border-2 mt-2'>
                 {
                     call.isReceivedCall && !callAccepted && (
                         <div className='flex justify-center'>

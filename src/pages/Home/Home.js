@@ -3,6 +3,7 @@ import ChatSection from './ChatSection';
 import InteractionSection from './InteractionSection';
 import Options from './Options';
 import VideoPlayer from './VideoPlayer';
+import Player from './Player'
 
 const Home = () => {
 
@@ -14,7 +15,7 @@ const Home = () => {
                     <InteractionSection></InteractionSection>
 
                     {/* middle side video conferance area  */}
-                    <div className='video-call h-[85vh] flex items-center'>
+                    <div className='video-call h-[85vh] flex'>
                         <div className=''>
                             {/* video player for video call  */}
                             <VideoPlayer />
@@ -24,7 +25,7 @@ const Home = () => {
                         </div>
 
                         {/* video/audio player controls  */}
-                        {/* <Player /> */}
+                        <Player />
                     </div>
 
                     {/* right side, chat area  */}
