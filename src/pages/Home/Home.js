@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div className='max-w-full bg-base-200 flex justify-center items-center'>
             <div className="max-w-full">
-                <div className="hero-content grid grid-flow-col w-full relative">
+                <div className="p-0 hero-content grid grid-flow-col w-full relative">
                     {/* left side, interaction area  */}
                     <InteractionSection></InteractionSection>
 
