@@ -14,8 +14,8 @@ const ChatSection = () => {
             </div>
             <div className="h-[45vh] text-left p-4  overflow-y-scroll">
                 <div className="flex items-start m-2">
-                    <div class="avatar mr-2 mt-4">
-                        <div class="w-8  rounded-full">
+                    <div className="avatar mr-2 mt-4">
+                        <div className="w-8  rounded-full">
                             <img src="https://placeimg.com/192/192/people" />
                         </div>
                     </div>
@@ -24,8 +24,8 @@ const ChatSection = () => {
                     </div>
                 </div>
                 <div className="flex flex-row-reverse items-start m-2">
-                    <div class="avatar ml-2 mt-4">
-                        <div class="w-8  rounded-full">
+                    <div className="avatar ml-2 mt-4">
+                        <div className="w-8  rounded-full">
                             <img src="https://placeimg.com/192/192/people" />
                         </div>
                     </div>
