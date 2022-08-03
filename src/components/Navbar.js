@@ -24,7 +24,7 @@ const Navbar = () => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal p-0 gap-6">
                         <Link to={'/'} as='li'>Home</Link>
-                        <Link to={'/'} as='li'>Calls</Link>
+                        <Link to={'/calls'} as='li'>Calls</Link>
                         <Link to={'/'} as='li'>Deals</Link>
                         <Link to={'/'} as='li'>Team</Link>
                         <Link to={'/'} as='li'>Activity</Link>
