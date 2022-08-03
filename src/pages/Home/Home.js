@@ -1,8 +1,7 @@
 import React from 'react';
 import ChatSection from './ChatSection';
 import InteractionSection from './InteractionSection';
-import VideoImg from '../../assets/video-conferance.png'
-import Player from './Player';
+import VideoPlayer from './VideoPlayer';
 
 const Home = () => {
 
@@ -16,9 +15,10 @@ const Home = () => {
                     {/* middle side video conferance area  */}
                     <div className='video-call h-[85vh] flex items-center'>
                         <div className=''>
-                            <div className='w-[483px] h-[396px]'>
-                                <img src={VideoImg} className='max-w-full' alt="video chat alternative" />
-                            </div>
+
+                            {/* video player for video call  */}
+                            <VideoPlayer />
+
                             <div className='flex'>
                                 <div className="input-group relative mt-2">
                                     <input type="text" placeholder="Search…" className="input input-bordered p-4 w-full border-4" style={{ borderRadius: '2rem' }} />
