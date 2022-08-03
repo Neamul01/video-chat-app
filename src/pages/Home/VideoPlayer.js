@@ -8,15 +8,24 @@ const VideoPlayer = () => {
         <div className='w-[483px] h-[396px]'>
             {/* <img src={VideoImg} className='max-w-full' alt="video chat alternative" /> */}
             {/* our own video  */}
-            <div className='w-full'>
-                <input type="text" defaultValue={name || ''} placeholder='Your Name' />
-                <video playsInline muted ref={myVideo} autoPlay className='w-[480px]' />
-            </div>
+            {
+                stream && (
+                    <div className='w-full'>
+                        <input type="text" defaultValue={name || ''} placeholder='Your Name' />
+                        <video playsInline muted ref={myVideo} autoPlay className='w-[480px]' />
+                    </div>
+                )
+            }
+
             {/* users video  */}
-            <div className='w-full'>
-                <input type="text" placeholder='Your Name' />
-                <video playsInline muted ref={usersVideo} autoPlay className='w-[480px]' />
-            </div>
+            {
+                callAccepted && !callEnded && (
+                    <div className='w-full'>
+                        <input type="text" defaultValue={call.name || ''} placeholder='Your Name' />
+                        <video playsInline muted ref={usersVideo} autoPlay className='w-[480px]' />
+                    </div>
+                )
+            }
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import ChatSection from './ChatSection';
 import InteractionSection from './InteractionSection';
+import Options from './Options';
 import VideoPlayer from './VideoPlayer';
 
 const Home = () => {
@@ -15,25 +16,14 @@ const Home = () => {
                     {/* middle side video conferance area  */}
                     <div className='video-call h-[85vh] flex items-center'>
                         <div className=''>
-
                             {/* video player for video call  */}
                             <VideoPlayer />
 
-                            <div className='flex'>
-                                <div className="input-group relative mt-2">
-                                    <input type="text" placeholder="Search…" className="input input-bordered p-4 w-full border-4" style={{ borderRadius: '2rem' }} />
-                                    <button className="btn btn-square btn-[#606060] absolute right-0">
-                                        add
-                                    </button>
-                                </div>
-                                <div className="input-group relative mt-2">
-                                    <input type="text" placeholder="Search…" className="input input-bordered p-4 w-full border-4" style={{ borderRadius: '2rem' }} />
-                                    <button className="btn btn-circle rounded-r-3xl btn-[#606060] capitalize absolute right-0 border-0 w-20" >
-                                        <small>Copy Link to clipboard</small>
-                                    </button>
-                                </div>
-                            </div>
+                            {/* options for video call */}
+                            <Options />
                         </div>
+
+                        {/* video/audio player controls  */}
                         {/* <Player /> */}
                     </div>
 
