@@ -1,70 +1,55 @@
 import React from 'react';
-import InteractionCard from './InteractionCard';
+import ChatSection from './ChatSection';
+import InteractionSection from './InteractionSection';
+import VideoImg from '../../assets/video-conferance.png'
 
 const Home = () => {
-    const cards = [1, 2, 3, 4, 5, 6];
+
     return (
         <div className='max-w-full bg-base-200 flex justify-center items-center'>
             <div class="max-w-full">
-                <div class="hero-content grid grid-flow-col w-full">
+                <div class="hero-content grid grid-flow-col w-full relative">
                     {/* left side interaction area  */}
-                    <div className="interaction-stats border-2 max-h-[85vh] max-w-[22rem] overflow-y-scroll">
-                        <div className="py-2 w-full bg-[#606060]">
-                            <h2 className='text-white text-xl font-bold'>Interaction Stats</h2>
-                        </div>
-                        <div className="py-2 m-2 p-2 text-left border-4 rounded-full">
-                            <small className='font-bold'>1 tip for Employee.</small>
-                        </div>
-                        {
-                            cards.map(card => <InteractionCard></InteractionCard>)
-                        }
-                    </div>
+                    <InteractionSection></InteractionSection>
+
                     {/* middle side video conferance area  */}
-                    <div className='video-call'>
-                        <h1 class="text-5xl font-bold">Box Office News!</h1>
-                        <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button class="btn btn-primary">Get Started</button>
+                    <div className='video-call h-[85vh] flex items-center'>
+                        <div className=''>
+                            <img src={VideoImg} alt="" />
+                        </div>
+                        <div className="p-2 w-full bg-[#606060] rounded-3xl absolute bottom-2 max-w-[51rem] left-4">
+                            <div className="grid grid-cols-12 items-center py-4 ">
+                                <div className=' text-white col-span-4'>
+                                    <small>Client Video Call Recording</small>
+                                </div>
+                                <div className='col-span-7'>
+                                    <div className='flex justify-between'>
+                                        <button className="btn btn-base-100 btn-sm capitalize"><small>Video</small></button>
+                                        <p className="video-controls"></p>
+                                        <button className="btn btn-base-100 btn-sm capitalize"><small>Transcript</small></button>
+                                    </div>
+                                    <div>
+                                        <span>&#5107B;</span>
+                                        <input type="range" min="0" max="100" value="40" class="range h-2" />
+                                    </div>
+                                </div>
+                                <div className='flex flex-col justify-center items-center w-20 float-right'>
+                                    <small className='text-white'>Speed</small>
+                                    <select class="select w-full max-w-[3rem] min-h-[1rem] h-[1.5rem] p-0 leading-3">
+                                        <option selected>1x</option>
+                                        <option>Homer</option>
+                                        <option>Marge</option>
+                                        <option>Bart</option>
+                                        <option>Lisa</option>
+                                        <option>Maggie</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     {/* right side chat area  */}
-                    <div className="group-chat border-2 max-h-[90vh] max-w-[22rem] overflow-y-scroll ">
-                        <div className="py-2 w-full bg-[#606060]">
-                            <h2 className='text-white text-xl font-bold'>Group Chats</h2>
-                        </div>
-                        <div className="input-group relative mt-2">
-                            <input type="text" placeholder="Search…" className="input input-bordered p-4 w-full border-4" style={{ borderRadius: '2rem' }} />
-                            <button className="btn btn-square btn-ghost absolute right-0">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                            </button>
-                        </div>
-                        <div className="h-[45vh] text-left p-4  overflow-y-scroll">
-                            <div className="flex items-start m-2">
-                                <div class="avatar mr-2 mt-4">
-                                    <div class="w-8  rounded-full">
-                                        <img src="https://placeimg.com/192/192/people" />
-                                    </div>
-                                </div>
-                                <div className='bg-base-100 p-4 rounded-t-3xl rounded-r-3xl'>
-                                    <p className=''>hello this is testing here are some new text. lets check this.Not onlu check this is double check</p>
-                                </div>
-                            </div>
-                            <div className="flex flex-row-reverse items-start m-2">
-                                <div class="avatar ml-2 mt-4">
-                                    <div class="w-8  rounded-full">
-                                        <img src="https://placeimg.com/192/192/people" />
-                                    </div>
-                                </div>
-                                <div className='bg-base-100 p-4 rounded-t-3xl rounded-l-3xl'>
-                                    <p className=''>hello this is testing here are some new text. lets check this</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className='flex flex-col'>
-                            <textarea type="text" className='h-24  p-2 m-2 rounded-lg' placeholder='Message...' />
-                            <div className=' flex justify-end'>
-                                <button className="btn btn-sm float-right">send</button>
-                            </div>
-                        </div>
-                    </div>
+                    <ChatSection></ChatSection>
                 </div>
             </div>
         </div>
