@@ -87,4 +87,4 @@ const ContextProvider = ({ children }) => {
     )
 }
 
-export { ContextProvider, SocketContext }
+export { ContextProvider, SocketContext, socket }
