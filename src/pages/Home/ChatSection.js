@@ -20,7 +20,7 @@ const ChatSection = () => {
                         </div>
                     </div>
                     <div className='bg-base-100 p-4 rounded-t-3xl rounded-r-3xl'>
-                        <p className=''>hello this is testing here are some new text. lets check this.Not onlu check this is double check</p>
+                        <p className='text-sm'>hello this is testing here are some new text. lets check this.Not onlu check this is double check</p>
                     </div>
                 </div>
                 <div className="flex flex-row-reverse items-start m-2">
@@ -30,7 +30,7 @@ const ChatSection = () => {
                         </div>
                     </div>
                     <div className='bg-base-100 p-4 rounded-t-3xl rounded-l-3xl'>
-                        <p className=''>hello this is testing here are some new text. lets check this</p>
+                        <p className='text-sm'>hello this is testing here are some new text. lets check this</p>
                     </div>
                 </div>
             </div>

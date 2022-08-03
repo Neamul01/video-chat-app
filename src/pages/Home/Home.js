@@ -2,6 +2,7 @@ import React from 'react';
 import ChatSection from './ChatSection';
 import InteractionSection from './InteractionSection';
 import VideoImg from '../../assets/video-conferance.png'
+import meetIcon from '../../assets/google_meet.png'
 import { AiFillStepForward } from 'react-icons/ai';
 import { AiFillStepBackward } from 'react-icons/ai';
 import { BsFillPauseCircleFill } from 'react-icons/bs';
@@ -22,10 +23,10 @@ const Home = () => {
                         </div>
                         <div className="p-2 w-full bg-[#606060] rounded-3xl absolute bottom-2 max-w-[51rem] left-4">
                             <div className="grid grid-cols-12 items-center py-4 ">
-                                <div className=' text-white col-span-4'>
-                                    <small>Client Video Call Recording</small>
+                                <div className=' text-white col-span-3 flex justify-center items-center border-white'>
+                                    <img src={meetIcon} alt="Zoom Icon" className='w-10' /><small>Client Video Call Recording</small>
                                 </div>
-                                <div className='col-span-7 '>
+                                <div className='col-span-8 border-r-2 border-l-2 ml-2 px-2'>
                                     <div className='flex justify-between'>
                                         <button className="btn btn-base-100 btn-sm capitalize"><small>Video</small></button>
                                         <p className="video-controls flex text-white">
