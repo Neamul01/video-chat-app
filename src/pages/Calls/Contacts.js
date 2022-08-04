@@ -19,7 +19,7 @@ const Contacts = () => {
                     <div className='flex justify-center items-center float-right bg-white rounded-xl w-full'>
                         <small className=' border-r-2'>Sort By</small>
                         <select className="select w-full max-w-[3rem] min-h-[1rem] h-[2rem] p-0 leading-3">
-                            <option selected>1x</option>
+                            <option>1x</option>
                             <option>Homer</option>
                             <option>Marge</option>
                             <option>Bart</option>

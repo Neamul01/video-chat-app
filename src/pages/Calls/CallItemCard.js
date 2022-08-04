@@ -7,7 +7,7 @@ const CallItemCard = ({ card }) => {
             <div className="card w-72 border-b-4 rounded-none">
                 <div className="card-body p-1 gap-0 mb-2 text-left">
                     <h2 className="card-title">{name}</h2>
-                    <div className="flex justify-end">
+                    <div className="flex justify-end gap-2">
                         {
                             Placeholder === 'Select'
                                 ?
