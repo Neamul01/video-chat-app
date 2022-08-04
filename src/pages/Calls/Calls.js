@@ -1,5 +1,5 @@
 import React from 'react';
-import ChatSection from '../Home/ChatSection';
+import AllCalls from './AllCalls';
 import CallItem from './CallItem';
 import Contacts from './Contacts';
 
@@ -16,9 +16,9 @@ const Calls = () => {
                     </div>
 
                     {/* middle side video conferance area  */}
-                    <div className='video-call h-[85vh] w-[40vw] flex items-center'>
-                        <h2 className='text-2xl font-semibold'>All Calls</h2>
-
+                    <div className='video-call h-[85vh] w-[40vw] flex flex-col'>
+                        <h2 className='text-3xl font-bold mb-4 text-left'>All Calls</h2>
+                        <AllCalls></AllCalls>
                     </div>
 
                     {/* right side, chat area  */}
