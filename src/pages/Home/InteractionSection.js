@@ -35,7 +35,11 @@ const InteractionSection = ({ children }) => {
             'range': 'Within recommended range'
         }
     ];
-    return <LeftSection name='Interaction Stats'>
+    const tipsBox = <div className="py-2 m-2 p-2 text-left border-4 rounded-full">
+        <small className='font-bold'>1 tip for Employee.</small>
+    </div>
+
+    return <LeftSection name='Interaction Stats' tipsBox={tipsBox}>
         {
             cards.map(card => <InteractionCard key={card.id} card={card}></InteractionCard>)
         }
